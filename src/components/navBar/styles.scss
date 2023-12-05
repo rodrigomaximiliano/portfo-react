@@ -1,0 +1,135 @@
+.navbar {
+  background-color: rgba(26, 38, 41, 0.8);
+  height: 80px;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  z-index: 1000;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: inherit;
+    padding: 0 20px;
+    flex: 1;
+
+    &__logo {
+        position:absolute;
+        width: 100px; /* Ajusta el tamaño del logo según tus preferencias */
+        height: 100px; /* Ajusta el tamaño del logo según tus preferencias */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        animation: rotate 5s linear infinite;
+        filter:drop-shadow(0px 2px 10px hwb(200 1% 5%));
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    &__menu {
+        display: flex;
+        list-style: none;
+        text-align: center;
+        margin-left: auto;
+       
+
+        &__item {
+            line-height: 40px;
+            margin-right: 1.5rem;
+            font-size: 1.6rem;
+
+            &::after {
+                content: "";
+                display: block;
+                height: 3px;
+                width: 0;
+                background:transparent;
+                transition: all 0.5s ease;
+            }
+
+            &:hover::after {
+                width: 100%;
+                background: whitesmoke;
+            }
+
+            &__links {
+                color: whitesmoke;
+                text-decoration: none;
+                padding: 0.5rem;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: #275e68;
+                }
+            }
+        }
+    }
+}
+
+.nav-icon {
+    display: none;
+    cursor: pointer;
+    padding-right: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar__container__menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+        background:  rgba(26, 38, 41, 0.8);
+        color: whitesmoke;
+       
+
+        &.show {
+            left: 0;
+            opacity: 1;
+        }
+
+        .navbar__container__menu__item {
+            line-height: 40px;
+            margin-right: 0;
+            text-align: center;
+            background-color: black;
+
+            &__links {
+                border-bottom: 1px solid whitesmoke;
+                padding: 1rem;
+                display: block;
+                color: whitesmoke;
+                transition: color  0.3s ease;
+
+                &:hover {
+                    color:#275e68;
+                }
+            }
+        }
+    }
+
+    .nav-icon {
+        display: block;
+        color: whitesmoke;
+        margin-left: auto;
+    }
+
+    .navbar__container__menu:not(.show) {
+        left: -110%;
+    }
+}
+}

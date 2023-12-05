@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+
+:root {
+    background-color: black;
+    position: sticky;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    color:whitesmoke;
+}
+
+html {
+    font-size: 63.5%;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+#root {
+    height: 100%;
+}
