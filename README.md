@@ -18,4 +18,4 @@ Si quieres contribuir, por favor abre un issue o envía un pull request.
 
 ![Captura de pantalla 2024-02-17 164508](https://github.com/rodrigomaximiliano/portfo-react/assets/116413011/63510239-81d4-4fd8-96a6-087931c4a504)
 
-Puedes ver mi portfolio corriendo en: https://portfo-react.vercel.app/
+Puedes ver el portfolio corriendo en: https://portfo-react.vercel.app/
